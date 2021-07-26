@@ -51,13 +51,19 @@ padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = Droid Sans Mono:style=Regular:pixelsize=10;2
-# font-1 = Font Awesome 5 Brands Regular:style=Regular:pixelsize=12;2
-font-1 = unifont:fontformat=truetype:size=14:antialias=false;2
-font-2 = siji:style=Regular:pixelsize=24;2
-font-3 = Font Awesome 5 Free:pixelsize=12;2
-font-4 = Font Awesome 5 Free Solid:pixelsize=12;2
-font-5 = Font Awesome 5 Brands:pixelsize=12;2
+ #font-0 = Droid Sans Mono:style=Regular:pixelsize=10;2
+ ## font-1 = Font Awesome 5 Brands Regular:style=Regular:pixelsize=12;2
+ #font-1 = unifont:fontformat=truetype:size=14:antialias=false;2
+ #font-2 = siji:style=Regular:pixelsize=24;2
+ #font-3 = Font Awesome 5 Free:pixelsize=12;2
+ #font-4 = Font Awesome 5 Free Solid:pixelsize=12;2
+ #font-5 = Font Awesome 5 Brands:pixelsize=12;2
+
+font-0 = "JetBrainsMono Nerd Font:style=Medium:size=8;2"
+font-1 = "JetBrainsMono Nerd Font:style=Bold:size=8;2"
+font-2 = "JetBrainsMono Nerd Font:size=19;5"
+font-3 = "Material Icons Outlined:9;4"
+font-4 = "Material Icons Round:9;4"
 
 modules-left = bspwm
 modules-center = xwindow
@@ -128,7 +134,7 @@ interval = 60
 
 mount-0 = /
 
-label-mounted = SSD:%used%/%total%
+label-mounted =  %used%/%total%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -248,10 +254,10 @@ label = CPU:%percentage:2%%
 [module/memory]
 type = internal/memory
 interval = 1
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
-label = RAM:%percentage_used%%
+label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
