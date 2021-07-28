@@ -67,7 +67,7 @@ font-4 = "Material Icons Round:9;4"
 
 modules-left = bspwm
 modules-center = xwindow
-modules-right = filesystem pulseaudio memory cpu battery wlan date
+modules-right = filesystem pulseaudio memory cpu wlan battery date
 
 separator = |
 tray-position = none
@@ -134,7 +134,8 @@ interval = 60
 
 mount-0 = /
 
-label-mounted =  %used%/%total%
+#label-mounted =  %used%/%total%
+label-mounted =   %free% free
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -266,8 +267,8 @@ interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
 format-connected-underline = #9f78e1
-#label-connected = %essid%
-label-connected = %{A1:nm-applet:}%essid%%{A}
+label-connected = %essid%: %local_ip%
+#label-connected = %{A1:nm-applet:}%essid%%{A}
 
 format-disconnected =
 ;format-disconnected = <label-disconnected>
@@ -275,11 +276,11 @@ format-disconnected =
 label-disconnected = %ifname% disconnected
 ;label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+ramp-signal-0 = 睊
+ramp-signal-1 = 直
+ramp-signal-2 = 直 
+ramp-signal-3 = 直 
+ramp-signal-4 = 直 
 ramp-signal-foreground = ${colors.foreground-alt}
 
 # [module/network]
@@ -388,13 +389,13 @@ format-disconnected =
 type = internal/date
 interval = 1
 
-date =
-date-alt = " %Y-%m-%d"
+date = "%d-%m-%Y"
+date-alt = "%Y-%m-%d"
 
-time = %H:%M
-time-alt = %H:%M:%S
+time = " %H:%M:%S"
+time-alt = " %H:%M"
 
-format-prefix =  
+format-prefix = " " 
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 
@@ -404,7 +405,7 @@ label = %date% %time%
 type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
-label-volume = Volume: %percentage%%
+label-volume = "  %percentage%%"
 label-volume-foreground = ${root.foreground}
 
 label-muted = muted
@@ -464,29 +465,31 @@ full-at = 99
 format-charging = <animation-charging> <label-charging>
 format-charging-underline = #ffb52a
 
-format-discharging = <animation-discharging> <label-discharging>
+format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
-format-full-prefix = " "
+format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
+ramp-capacity-0 = " "
+ramp-capacity-1 = " "
+ramp-capacity-2 = " "
+ramp-capacity-3 = " "
+ramp-capacity-4 = " "
 ramp-capacity-foreground = ${colors.foreground-alt}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
+animation-charging-0 = " "
+animation-charging-1 = " "
+animation-charging-2 = " "
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
-animation-discharging-0 = 
-animation-discharging-1 = 
-animation-discharging-2 = 
-animation-discharging-foreground = ${colors.foreground-alt}
-animation-discharging-framerate = 750
+# animation-discharging-0 = " " 
+# animation-discharging-1 = " " 
+# animation-discharging-2 = " " 
+# animation-discharging-foreground = ${colors.foreground-alt}
+# animation-discharging-framerate = 750
 
 [module/temperature]
 type = internal/temperature
