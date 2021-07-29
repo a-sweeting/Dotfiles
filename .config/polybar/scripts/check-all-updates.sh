@@ -11,8 +11,6 @@ if ! updates_aur=$(paru -Su --aur --quiet | wc -l); then
 fi
 
 updates=$(("$updates_arch" + "$updates_aur"))
-echo "$updates_arch"
-echo "$updates_aur"
 
 if [ "$updates" -gt 0 ]; then
     echo " $updates"
