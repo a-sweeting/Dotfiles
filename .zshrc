@@ -108,6 +108,6 @@ alias neofetch="neofetch --disable Theme Icons"
 alias please="sudo $(history -p !!)"
 alias sx="startx"
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
-alias zp="source ~/.zshrc" 
+alias zp="clear && source ~/.zshrc" 
 
 neofetch
