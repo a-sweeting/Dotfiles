@@ -67,7 +67,7 @@ font-4 = "Material Icons Round:9;4"
 
 modules-left = bspwm
 modules-center = xwindow
-modules-right = filesystem pulseaudio memory cpu wlan battery date powermenu
+modules-right = filesystem arch-aur-updates memory cpu wlan battery date powermenu
 
 separator = |
 tray-position = none
